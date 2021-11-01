@@ -3,8 +3,7 @@ import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { connect } from "react-redux";
 import { BadgeAvatar } from "./index";
-// import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import AccountMenu from "./menu";
+import AccountMenu from "./Menu";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -20,7 +19,7 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     flexGrow: 1,
   },
-  username: {
+  userName: {
     letterSpacing: -0.23,
     fontSize: 16,
     fontWeight: "bold",
@@ -42,7 +41,7 @@ const CurrentUser = (props) => {
     <Box className={classes.root}>
       <BadgeAvatar photoUrl={user.photoUrl} online={true} />
       <Box className={classes.subContainer}>
-        <Typography className={classes.username}>{user.username}</Typography>
+        <Typography className={classes.userName}>{user.username}</Typography>
 
         <AccountMenu logout={props.logout} />
       </Box>

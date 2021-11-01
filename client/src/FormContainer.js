@@ -6,35 +6,35 @@ import {
   Typography,
   Button,
   makeStyles,
-  MuiThemeProvider,
+  Box,
 } from "@material-ui/core";
 
 import { ReactComponent as BubbleIcon } from "./assets/bubble.svg";
-import { login } from "./store/utils/thunkCreators";
 import { commonStyles } from "./common/styles";
-import { newTheme, theme } from "./themes/theme";
+import { theme } from "./themes/theme";
 
 const useStyles = makeStyles((theme) => ({
-  main_container: {
+  mainContainer: {
     maxWidth: "1920px",
     margin: "auto",
     height: "100vh",
   },
 
-  main_grid_left: {
+  mainGridLeft: {
     background:
       'url("https://res.cloudinary.com/dinspdp3w/image/upload/v1634753482/bg-img_hp1hks.png") no-repeat ',
     backgroundSize: "cover",
     height: "100%",
   },
 
-  text_overlay: {
+  textOverlay: {
     height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    gap: "40px",
     alignItems: "center",
-    padding: "0 60px",
+    padding: "0 100px",
     backgroundImage:
       "linear-gradient(to top, rgb(58 141 255 / 85%) , rgb(134 185 255 / 85%))",
     textAlign: "center",
@@ -64,13 +64,13 @@ const RenderButton = () => {
 
   return (
     <>
-      <div className={classes.renderButton}>
+      <Typography className={classes.renderButton}>
         {location === "/login"
           ? "Don't have an account?"
           : "Already have an account?"}
-      </div>
+      </Typography>
       <Button
-        className={classes.button_style}
+        className={classes.buttonStyle}
         type="submit"
         variant="contained"
         size="large"
@@ -90,28 +90,29 @@ const FormContainer = (props) => {
   if (user.id) return <Redirect to="/home" />;
 
   return (
-    <Grid container direction="row" className={classes.main_container}>
-      <Grid className={classes.main_grid_left} md={5} sm={12} item>
-        <div className={classes.text_overlay}>
+    <Grid container direction="row" className={classes.mainContainer}>
+      <Grid className={classes.mainGridLeft} md={5} sm={12} item>
+        <Box className={classes.textOverlay}>
           <BubbleIcon />
-          <MuiThemeProvider theme={newTheme}>
-            <Typography color="primary">
-              Converse with anyone with any language
-            </Typography>
-          </MuiThemeProvider>
-        </div>
+          <Typography
+            variant="h1"
+            className={classes.tagline}
+            color="secondary"
+          >
+            Converse with anyone with any language
+          </Typography>
+        </Box>
       </Grid>
       <Grid
-        className={classes.main_grid_right}
+        className={classes.mainGridRight}
         md={7}
         sm={12}
         direction={"column"}
         container
       >
         <Grid container className={classes.rightHeader}>
-          {<RenderButton />}
+          <RenderButton />
         </Grid>
-
         {props.children}
       </Grid>
     </Grid>
