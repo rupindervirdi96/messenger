@@ -4,10 +4,9 @@ export const theme = createTheme({
   typography: {
     fontFamily: "Open Sans, sans-serif",
     fontSize: 14,
-    button: {
-      textTransform: "none",
-      letterSpacing: 0,
-      fontWeight: "bold",
+    h1: {
+      fontFamily: "Open Sans",
+      fontSize: 42,
     },
   },
   overrides: {
@@ -19,19 +18,6 @@ export const theme = createTheme({
   },
   palette: {
     primary: { main: "#3A8DFF" },
-    secondary: { main: "#B0B0B0" },
-  },
-});
-
-export const newTheme = createTheme({
-  typography: {
-    fontFamily: "Open Sans",
-    fontWeight: "bold",
-    fontSize: 42,
-  },
-  palette: {
-    primary: {
-      main: "#FFFFFF",
-    },
+    secondary: { main: "#FFFFFF" },
   },
 });

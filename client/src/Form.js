@@ -62,7 +62,7 @@ function Form(props) {
               <Grid container>
                 <FormControl className={classes.formControl}>
                   <TextField
-                    className={classes.text_field}
+                    className={classes.textField}
                     aria-label="username"
                     label="Username"
                     name="username"
@@ -75,7 +75,7 @@ function Form(props) {
               <Grid container>
                 <FormControl className={classes.formControl}>
                   <TextField
-                    className={classes.text_field}
+                    className={classes.textField}
                     label="E-mail address"
                     aria-label="e-mail address"
                     type="email"
@@ -93,7 +93,7 @@ function Form(props) {
                   <TextField
                     aria-label="password"
                     label="Password"
-                    className={classes.text_field}
+                    className={classes.textField}
                     type="password"
                     inputProps={{ minLength: 6 }}
                     name="password"
@@ -117,7 +117,7 @@ function Form(props) {
                     inputProps={{ minLength: 6 }}
                     name="confirmPassword"
                     required
-                    className={classes.text_field}
+                    className={classes.textField}
                     {...textFieldStyles}
                   />
                   <FormHelperText className={classes.formHelperText}>
@@ -130,7 +130,7 @@ function Form(props) {
             <Grid container>
               <FormControl className={classes.formControl}>
                 <TextField
-                  className={classes.text_field}
+                  className={classes.textField}
                   aria-label="username"
                   label="Username"
                   name="username"
@@ -140,7 +140,7 @@ function Form(props) {
                 />
               </FormControl>
               <TextField
-                className={classes.text_field}
+                className={classes.textField}
                 label="Password"
                 variant="standard"
                 type="Password"
@@ -160,7 +160,7 @@ function Form(props) {
             type="submit"
             variant="contained"
             size="large"
-            className={`${classes.button_style} `}
+            className={classes.buttonStyle}
           >
             {type === "register" ? "Create" : "Login"}
           </Button>

@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 
 export const commonStyles = makeStyles(() => ({
-  text_field: {
+  textField: {
     padding: "20px 0px 0px 0px",
     margin: "20px 0px",
     width: "100%",
@@ -13,7 +13,7 @@ export const commonStyles = makeStyles(() => ({
     maxWidth: "80%",
     margin: "auto",
   },
-  button_style: {
+  buttonStyle: {
     width: "180px",
     color: ({ color }) => color,
     backgroundColor: ({ bgcolor }) => bgcolor,
