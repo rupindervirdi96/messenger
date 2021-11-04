@@ -11,6 +11,8 @@ import { clearOnLogout } from "../store/index";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
+    display: "grid",
+    gridTemplateColumns: "400px 1fr",
   },
 }));
 

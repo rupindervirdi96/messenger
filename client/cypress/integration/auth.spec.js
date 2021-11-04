@@ -2,7 +2,7 @@
 
 describe("Auth Screens", () => {
   it("Loads signup page", () => {
-    cy.visit("http://localhost:3000/register");
+    cy.visit("http://localhost:3000/register", { responseTimeout: 120000 });
 
     // Check expected UI elements.
     cy.contains("button", "Create");
